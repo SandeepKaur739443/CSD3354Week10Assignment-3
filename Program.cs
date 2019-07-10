@@ -37,16 +37,23 @@ class TextProcessing
             }
             file.Close();
             Console.WriteLine($"File has {counter} lines.");
-
+            //post condition of while looop
+            //we now have a data memeer named names which is queue
+            PlayWithStacks.Run(names);
         }
     }
 }
 
 class PlayWithStacks
 {
-    public void Run()
+    public static void Run(Queue<string> tangerine)
     {
         Stack<string> names = new Stack<string>();
+        foreach(var item in tangerine)
+        {
+            // Console.WriteLine(tangerine);
+            names.Push(tangerine.Dequeue());
+        }
 
     }
 }
