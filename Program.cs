@@ -13,7 +13,7 @@ namespace ConsoleApp1
         {
             var tp = new TextProcessing();
            // tp.Run();
-           new Blue().SayFavouriteFood(Red.favouritefood); ;
+          // new Blue().SayFavouriteFood(Red.favouritefood); ;
           
         }
     }
