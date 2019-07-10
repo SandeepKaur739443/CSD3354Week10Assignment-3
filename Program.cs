@@ -12,7 +12,9 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             var tp = new TextProcessing();
-            tp.Run();
+           // tp.Run();
+           new Blue().SayFavouriteFood(Red.favouritefood); ;
+          
         }
     }
 }
@@ -47,4 +49,20 @@ class PlayWithStacks
         Stack<string> names = new Stack<string>();
 
     }
+}
+class WorkBench { }
+class Red
+{
+    public static string favouriteFood = "Patani";
+
+
+}
+class Blue
+{
+    public void SayFavouriteFood(string Favfood)
+    {
+        Console.WriteLine(Red.favouriteFood);
+    }
+
+
 }
