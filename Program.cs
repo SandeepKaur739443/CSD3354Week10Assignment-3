@@ -12,13 +12,17 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             var tp = new TextProcessing();
+            tp.Run();
         }
     }
 }
 class TextProcessing
 {
+    Queue<string> names = new Queue<string>();
     public void Run()
     {
+      
+        //open the namesfile and access data
         using (StreamReader file = new StreamReader("U:/Users/739443/babynames/TextFile1.txt"))
         {
             int counter = 0;
@@ -26,11 +30,21 @@ class TextProcessing
 
             while ((ln = file.ReadLine()) != null)
             {
-                Console.WriteLine(ln);
+               names.Enqueue(ln);
                 counter++;
             }
             file.Close();
             Console.WriteLine($"File has {counter} lines.");
+
         }
+    }
+}
+
+class PlayWithStacks
+{
+    public void Run()
+    {
+        Stack<string> names = new Stack<string>();
+
     }
 }
