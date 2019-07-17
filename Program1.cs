@@ -13,9 +13,17 @@ namespace Assignment_3
         }
     }
 
-    class LinkedList
+   class LinkedList
+{
+    Node Head, Orange, Tangerine, Tail;
+    public void CreateLikedList()
     {
-        Node Head;
+        Head = new Node();
+        Orange = new Node();
+        Tangerine = new Node();
+        Tail = Tangerine;
+        Head.nextlink = Orange;
+        Console.WriteLine("hello");
 
     }
     class Node
